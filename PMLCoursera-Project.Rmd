@@ -29,7 +29,7 @@ library(randomForest)
 library(rattle)
 ```
 Let's get the data from the appropriate files:
-```{r, cache=TRUE}
+```{r, cache=TRUE, message=TRUE}
 training <- read.csv("pml-training.csv")
 testing<-read.csv("pml-testing.csv")
 dim(training); dim(testing)
