@@ -120,8 +120,21 @@ dim(trainTemp)</code></pre>
 <pre><code>## [1] 19622    37</code></pre>
 <pre class="r"><code>dim(testTemp)</code></pre>
 <pre><code>## [1] 20 37</code></pre>
-<p>We are not down to 37 variables to use in our model.</p>
-<p>Note: if we build a RandomForest model (modFit&lt;- randomForest(classe ~ ., data = training, importance = TRUE), with all 53 variables, we get a model with Accuracy = 1 (which is very good) and it passes the accuracy test with the test dataset. We did this intermediate step only because we wanted to reduce the number of variables used in the model s much as possible and also wanted ot exercise a different style of model.</p>
+<p>We are not down to 37 variables to use in our model and they are:</p>
+<pre class="r"><code>tmp</code></pre>
+<pre><code>##  [1] &quot;accel_arm_x&quot;          &quot;accel_arm_y&quot;          &quot;accel_belt_y&quot;        
+##  [4] &quot;accel_belt_z&quot;         &quot;accel_dumbbell_x&quot;     &quot;accel_dumbbell_y&quot;    
+##  [7] &quot;accel_dumbbell_z&quot;     &quot;accel_forearm_x&quot;      &quot;accel_forearm_y&quot;     
+## [10] &quot;accel_forearm_z&quot;      &quot;gyros_arm_x&quot;          &quot;gyros_belt_z&quot;        
+## [13] &quot;magnet_arm_x&quot;         &quot;magnet_arm_y&quot;         &quot;magnet_belt_x&quot;       
+## [16] &quot;magnet_belt_y&quot;        &quot;magnet_belt_z&quot;        &quot;magnet_dumbbell_x&quot;   
+## [19] &quot;magnet_dumbbell_y&quot;    &quot;magnet_dumbbell_z&quot;    &quot;magnet_forearm_x&quot;    
+## [22] &quot;magnet_forearm_y&quot;     &quot;magnet_forearm_z&quot;     &quot;pitch_belt&quot;          
+## [25] &quot;pitch_dumbbell&quot;       &quot;pitch_forearm&quot;        &quot;roll_arm&quot;            
+## [28] &quot;roll_belt&quot;            &quot;roll_dumbbell&quot;        &quot;roll_forearm&quot;        
+## [31] &quot;total_accel_belt&quot;     &quot;total_accel_dumbbell&quot; &quot;total_accel_forearm&quot; 
+## [34] &quot;yaw_arm&quot;              &quot;yaw_belt&quot;             &quot;yaw_forearm&quot;</code></pre>
+<p>Note: if we build a RandomForest model (modFit&lt;- randomForest(classe ~ ., data = training, importance = TRUE), with all 53 variables, we get a model with Accuracy = 1 (which is very good) and it passes the accuracy test with the test dataset. We did this intermediate step only because we wanted to reduce the number of variables used in the model as much as possible and also wanted to exercise a different style of prediction model.</p>
 </div>
 <div id="model---final-choice" class="section level3">
 <h3>Model - final choice</h3>

@@ -82,9 +82,12 @@ testTemp<-testing[, c(tmp,"classe")]
 dim(trainTemp)
 dim(testTemp)
 ```
-We are not down to `r dim(trainTemp)[2]` variables to use in our model.
+We are not down to `r dim(trainTemp)[2]` variables to use in our model and they are:
+```{r}
+tmp
+```
 
-Note: if we build a RandomForest model (modFit<- randomForest(classe ~ ., data = training, importance = TRUE), with all `r dim(training)[2]` variables, we get a model with Accuracy = 1 (which is very good) and it passes the accuracy test with the test dataset. We did this intermediate step only because we wanted to reduce the number of variables used in the model s much as possible and also wanted ot exercise a different style of model.
+Note: if we build a RandomForest model (modFit<- randomForest(classe ~ ., data = training, importance = TRUE), with all `r dim(training)[2]` variables, we get a model with Accuracy = 1 (which is very good) and it passes the accuracy test with the test dataset. We did this intermediate step only because we wanted to reduce the number of variables used in the model as much as possible and also wanted to exercise a different style of prediction model.
 
 
 ###Model - final choice
