@@ -111,7 +111,7 @@ table(predict(modelFit), trainTemp$classe)
 ```
 
 ###Out of Sample Errors
-Let's calculate the Out of Sample Error Rate for our model:
+We expect the error of our model to be close to 0. Let's calculate the Out of Sample Error Rate for our model:
 ```{r}
 confTable<-confusionMatrix(pred,trainTemp$classe)
 errorRate<-1-sum(diag(confTable$table))/sum(confTable$table)
@@ -124,6 +124,6 @@ Finally, we perform the verification on the test set (which went through the sam
 predTest <- predict(modelFit, newdata=testTemp)
 predTest
 ```
-The results were verified with the submission part of the asignment and passed 100%.
+The results were verified with the submission part of the asignment and passed 100, which demostrates, yet again, that the out of sample error is zero.
 
 

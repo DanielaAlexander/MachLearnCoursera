@@ -206,7 +206,7 @@ confusionMatrix(pred, trainTemp$classe)$overall[1]</code></pre>
 </div>
 <div id="out-of-sample-errors" class="section level3">
 <h3>Out of Sample Errors</h3>
-<p>Let’s calculate the Out of Sample Error Rate for our model:</p>
+<p>We expect the error of our model to be close to 0. Let’s calculate the Out of Sample Error Rate for our model:</p>
 <pre class="r"><code>confTable&lt;-confusionMatrix(pred,trainTemp$classe)
 errorRate&lt;-1-sum(diag(confTable$table))/sum(confTable$table)
 errorRate</code></pre>
@@ -220,7 +220,7 @@ predTest</code></pre>
 <pre><code>##  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 
 ##  B  A  B  A  A  E  D  B  A  A  B  C  B  A  E  E  A  B  B  B 
 ## Levels: A B C D E</code></pre>
-<p>The results were verified with the submission part of the asignment and passed 100%.</p>
+<p>The results were verified with the submission part of the asignment and passed 100, which demostrates, yet again, that the out of sample error is zero.</p>
 </div>
 </div>
 
